@@ -17,6 +17,7 @@ st.write('The name of your Smoothie will be:', name_on_order)
 
 st.write("""Choose the fruits you want in your custom smoothie:""")
 
+import get_active_session
 session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'), col('SEARCH_ON'))
 # st.dataframe(data=my_dataframe, use_container_width=True)
